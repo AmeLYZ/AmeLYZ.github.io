@@ -223,7 +223,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>464</span>
+      <span>472</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
@@ -257,7 +257,7 @@
 <p>When you are establishing one connection through SSH, your machine (client end) is authorized whether it has the matching private key or not.  </p>
 <hr>
 <h2 id="How-To-Use"><a href="#How-To-Use" class="headerlink" title="How To Use"></a>How To Use</h2><h3 id="3-1-Check-host-machine"><a href="#3-1-Check-host-machine" class="headerlink" title="3.1. Check host machine"></a>3.1. Check host machine</h3><p>Make sure the ssh service is started.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service ssh status</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo service ssh status</span><br><span class="line"></span><br><span class="line"><span class="comment"># start the service</span></span><br><span class="line">sudo service ssh start</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-2-Generate-public-private-key-pair"><a href="#3-2-Generate-public-private-key-pair" class="headerlink" title="3.2. Generate public-private key pair"></a>3.2. Generate public-private key pair</h3><p>The very first step is to generate <mark class="label primary"> publiv private key pair</mark> and place it into the right path.<br>In cloud server scenario, they mostly provide SSH pair in the procedure of deploying new servers. All you need is to <mark class="label primary"> download the private key file in client end</mark>.<br>Otherwise, you have to generate the pair by your self (Command line or PuTTY):</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t &lt;key-type&gt; -b &lt;bit-length&gt; -C <span class="string">&quot;key name&quot;</span> -f <span class="string">&quot;name of the root file&quot;</span></span><br><span class="line">ssh-keygen -t rsa -b 2048 -C github_myemail@email.com -f rsa_20230618</span><br></pre></td></tr></table></figure>
